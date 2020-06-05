@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Js</title>
+  </head>
+  <body>
+    <h1>first js with html</h1>
+    <p>this is a regular p tag</p>
+    <p id="idone">this is p with id</p>
+    <p class="classone">this is p with class</p>
+    <p>this is lower paragraph</p>
+    <p>I am added by DOM</p>
+
+    <script>
+      // alert("it is a js feature");
+      // document.title = "changed title";
+      //console.log(document.getElementById("idone"));
+      // const query = document.querySelectorAll("p");
+      // console.log(query[3]);
+      //const query1 = document.querySelector("#idone");
+      // console.log(query1);
+
+      const myPelement = document.querySelectorAll("p");
+      myPelement.forEach((p) => (p.textContent = "p is changed"));
+      document.querySelector("#idone").remove();
+
+      const myNewPara = document.createElement("p");
+      myNewPara.textContent = "I am added via HTML";
+      document.querySelector("body").appendChild(myNewPara);
+    </script>
+  </body>
+</html>

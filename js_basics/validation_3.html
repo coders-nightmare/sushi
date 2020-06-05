@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form validation</title>
+  </head>
+
+  <body>
+    <h1>hello coders</h1>
+    <p>hello coders</p>
+    <p>hello coders</p>
+    <p>hello coders</p>
+    <input type="text" name="" id="myform" placeholder="search here" />
+    <button type="button" onclick="validaton()">click me</button>
+    <form action="" class="vform">
+      <input type="text" name="username" id="" placeholder="username" />
+      <button type="submit">Submit</button>
+    </form>
+    <script>
+      function validaton() {
+        let myvalue = document.getElementById("myform").value;
+        if (isNaN(myvalue) || myvalue < 1 || myvalue > 20) {
+          console.log("Not a valid input");
+        } else {
+          console.log("Its cool");
+        }
+      }
+      document.querySelector(".vform").addEventListener("submit", (event) => {
+        event.preventDefault();
+        console.log(event.target.username.value);
+        event.target.username.value = "";
+      });
+    </script>
+  </body>
+</html>
